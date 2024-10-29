@@ -29,6 +29,7 @@
   #:use-module (gnu packages emacs)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages mtools)
+  #:use-module (gnu packages bootloader)
   #:use-module (gnu packages package-management)
   #:use-module (gnu services)
   #:use-module (gnu services base)
@@ -89,7 +90,7 @@
 
     ;; Add some extra packages useful for the installation process
     (packages
-     (append (list git curl stow vim emacs-no-x-toolkit)
+     (append (list git curl stow vim emacs-no-x-toolkit grub)
              (operating-system-packages installation-os)))))
 
 installation-os-nonfree
